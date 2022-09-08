@@ -31,7 +31,7 @@ public class PlayerControls : MonoBehaviour
 
     void MoveLeftCube()
     {
-        if(playerControls.Player.MoveLeft.inProgress)
+        if(playerControls.Player.MoveLeft.IsPressed())
         {
             LeftCube.gameObject.GetComponent<Rigidbody>().AddForce(playerControls.Player.MoveLeft.ReadValue<Vector2>().x*Force,0,playerControls.Player.MoveLeft.ReadValue<Vector2>().y*Force);
         }
@@ -43,7 +43,7 @@ public class PlayerControls : MonoBehaviour
 
     void MoveRightCube()
     {
-        if(playerControls.Player.MoveRight.inProgress)
+        if(playerControls.Player.MoveRight.IsPressed())
         {
             RightCube.gameObject.GetComponent<Rigidbody>().AddForce(playerControls.Player.MoveRight.ReadValue<Vector2>().x*Force,0,playerControls.Player.MoveRight.ReadValue<Vector2>().y*Force);
         }
